@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="PolvakWPF.Forms.ButtonPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="300">
+
+  <UserControl.Resources>
+        <Style x:Key="myStyle" TargetType="Button">
+            
+            <Setter Property="Padding" Value="8,4" />
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="FontSize" Value="18" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+      <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Style="{StaticResource myStyle}" Content="BE16000" Tag="0" Click="SelectClick" />
+        <Button Grid.Row="1" Style="{StaticResource myStyle}" Content="BE16001" Tag="1" Click="SelectClick"  />
+        <Button Grid.Row="2" Style="{StaticResource myStyle}" Content="CE3" Tag="2" Click="SelectClick" />
+        <Button Grid.Row="3" Style="{StaticResource myStyle}" Content="CE4" Tag="3" Click="SelectClick" />
+        <Button Grid.Row="4" Style="{StaticResource myStyle}" Content="СЭ25" Tag="4" Click="SelectClick" />
+        <Button Grid.Row="5" Style="{StaticResource myStyle}" Content="ГМВ40" Tag="5" Click="SelectClick" />
+        <Button Grid.Row="6" Style="{StaticResource myStyle}" Content="ГМВ60" Tag="6" Click="SelectClick" />
+        <Button Grid.Row="7" Style="{StaticResource myStyle}" Content="Каустик" Tag="7" Click="SelectClick" />
+        <Button Grid.Row="8" Style="{StaticResource myStyle}" Content="ПРГ новый" Tag="8" Click="SelectClick" />
+        <Button Grid.Row="9" Style="{StaticResource myStyle}" Content="ПРГ старый" Tag="9" Click="SelectClick" />
+        <Button Grid.Row="10" Style="{StaticResource myStyle}" Content="Репульпатор" Tag="10" Click="SelectClick" />
+    </Grid>
+</UserControl>

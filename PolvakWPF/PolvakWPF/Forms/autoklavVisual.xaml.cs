@@ -12,17 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using PolvakWPF.Logic;
 
-namespace PolvakWPF
+namespace PolvakWPF.Forms
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for autoklavVisual.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AutoklavVisual : UserControl
     {
-        public MainWindow()
+        private AutoklavData Data = new AutoklavData();
+        public AutoklavVisual()
         {
             InitializeComponent();
+            DataContext = Data;
+            Data.Apparat = 10;
+            Data.PApparat = 11;
+            Data.PodPara = 12;
+            Data.RubNiz = 13;
+            Data.RubVerh = 14;
+            Data.Uroven = 15;
         }
     }
 }

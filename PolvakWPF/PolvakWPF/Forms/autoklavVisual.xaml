@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="PolvakWPF.Forms.AutoklavVisual"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="588" Width="866">
+    <Grid>
+        <Label Content="{Binding Path=Apparat}" Background="White" Height="30" Width="50" Margin="409,229,407,329" Panel.ZIndex="1"/>
+        <Label Content="{Binding Path=RubNiz}" Background="White" Height="30" Width="50" Margin="409,357,407,201" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=RubVerh}" Background="White" Height="30" Width="50" Margin="479,265,337,293" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=PodPara}" Background="White" Height="30" Width="50" Margin="321,265,495,293" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=PApparat}" Background="White" Height="30" Width="50" Margin="461,414,355,144" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=Uroven}" Background="White" Height="30" Width="50" Margin="321,357,495,201" Panel.ZIndex="1" />
+        <Image Source="Сборка1.JPG"/>
+    </Grid>
+</UserControl>
