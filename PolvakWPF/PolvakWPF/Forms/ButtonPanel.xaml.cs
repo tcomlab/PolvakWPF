@@ -53,8 +53,15 @@ namespace PolvakWPF.Forms
             InitializeComponent();
         }
 
+        private Button _currentButton = new Button();
+
         private void SelectClick(object sender, RoutedEventArgs e)
         {
+
+            _currentButton.Background = Brushes.White;
+            _currentButton = (Button) sender;
+            _currentButton.Background = Brushes.Orange;
+
             var a = (string)(((Button)sender).Tag);
             var ab = (ViewState) Convert.ToByte(a);
             if (ChangeView != null)

@@ -6,15 +6,17 @@
              xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" x:Class="PolvakWPF.Forms.ChartPanel" 
              Height="150" Width="1016">
     <Grid>
-
-        <dxc:ChartControl HorizontalAlignment="Left" VerticalAlignment="Top">
-            <dxc:ChartControl.Legend>
-                <dxc:Legend/>
-            </dxc:ChartControl.Legend>
-            <dxc:XYDiagram2D>
-                <dxc:BarSideBySideSeries2D DisplayName="Series 1"/>
+        <dxc:ChartControl HorizontalAlignment="Left" VerticalAlignment="Top" x:Name="ChartControl1" Panel.ZIndex="1">
+            <dxc:XYDiagram2D x:Name="Diagram2D1">
+                <dxc:XYDiagram2D.AxisX>
+                    <dxc:AxisX2D DateTimeGridAlignment="Minute" DateTimeMeasureUnit="Minute">
+                        <dxc:AxisX2D.DateTimeOptions>
+                            <dxc:DateTimeOptions Format="ShortTime"/>
+                        </dxc:AxisX2D.DateTimeOptions>
+                    </dxc:AxisX2D>
+                </dxc:XYDiagram2D.AxisX>
             </dxc:XYDiagram2D>
         </dxc:ChartControl>
-
+        <Image Source="628.jpg" Panel.ZIndex="0"/>
     </Grid>
 </UserControl>

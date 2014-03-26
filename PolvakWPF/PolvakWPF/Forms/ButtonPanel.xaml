@@ -9,7 +9,7 @@
 
   <UserControl.Resources>
         <Style x:Key="myStyle" TargetType="Button">
-            
+            <Setter Property="Background" Value="White"/>
             <Setter Property="Padding" Value="8,4" />
             <Setter Property="Margin" Value="4" />
             <Setter Property="FontSize" Value="18" />
@@ -30,7 +30,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="0" Style="{StaticResource myStyle}" Content="BE16000" Tag="0" Click="SelectClick" />
+        <Button Grid.Row="0" Style="{StaticResource myStyle}" Content="BE16000" Tag="0" Click="SelectClick"/>
         <Button Grid.Row="1" Style="{StaticResource myStyle}" Content="BE16001" Tag="1" Click="SelectClick"  />
         <Button Grid.Row="2" Style="{StaticResource myStyle}" Content="CE3" Tag="2" Click="SelectClick" />
         <Button Grid.Row="3" Style="{StaticResource myStyle}" Content="CE4" Tag="3" Click="SelectClick" />

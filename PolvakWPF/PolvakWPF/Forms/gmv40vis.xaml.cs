@@ -12,17 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using OwenProtokol;
 using PolvakWPF.Logic;
 
 namespace PolvakWPF.Forms
 {
     /// <summary>
-    /// Interaction logic for autoklavVisual.xaml
+    /// Interaction logic for gmv40vis.xaml
     /// </summary>
-    public partial class AutoklavVisual : UserControl
+    public partial class gmv40vis : UserControl
     {
-        public AutoklavVisual(AutoklavData context)
+        public gmv40vis(Gmv40Cl context)
         {
             InitializeComponent();
             DataContext = context;

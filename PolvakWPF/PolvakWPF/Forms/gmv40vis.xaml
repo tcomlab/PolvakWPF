@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="PolvakWPF.Forms.gmv40vis"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:forms="clr-namespace:PolvakWPF.Forms"
+             Height="588" Width="866">
+    <UserControl.Resources>
+        <forms:SensorToStringLabel x:Key="converter" />
+        <Style x:Key="StyleLabel" TargetType="Label">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Panel.ZIndex" Value="1"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="27"/>
+            <Setter Property="Width" Value="87"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Label HorizontalAlignment="Center" Content="Градирня ГМВ-40" FontSize="50" Panel.ZIndex="1" Foreground="White" FontStyle="Normal" Margin="0,0,0,506"/>
+        <Label Content="{Binding Path=ToGradirnya,Converter={StaticResource converter}}" Margin="447,369,332,192" Style="{StaticResource StyleLabel}"  />
+        <Label Content="{Binding Path=FromGradirnya,Converter={StaticResource converter}}" Margin="447,423,332,138" Style="{StaticResource StyleLabel}" />
+        <Label Content="{Binding Path=AvtoklavCirculation,Converter={StaticResource converter}}" Margin="447,317,332,244" Style="{StaticResource StyleLabel}" />
+        <Label Content="{Binding Path=Tank6,Converter={StaticResource converter}}" Margin="150,394,629,166" Style="{StaticResource StyleLabel}" />
+        <Label Content="{Binding Path=Tank7,Converter={StaticResource converter}}" Margin="271,393,545,165" Style="{StaticResource StyleLabel}" />
+        <Label Content="{Binding Path=Tank8,Converter={StaticResource converter}}" Margin="226,91,590,467" Style="{StaticResource StyleLabel}" />
+        <Image Source="scr65552.png"  Panel.ZIndex="0"/>
+    </Grid>
+</UserControl>

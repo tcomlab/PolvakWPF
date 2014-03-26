@@ -2,16 +2,30 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:forms="clr-namespace:PolvakWPF.Forms"
              Height="588" Width="866">
+    <UserControl.Resources>
+        <forms:SensorToStringLabel x:Key="converter" />
+
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="Width" Value="130"/>
+            <Setter Property="Background" Value="#FF4F3B3B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+
     <Grid>
-        <Label Content="{Binding Path=Apparat}" Background="White" Height="30" Width="50" Margin="409,229,407,329" Panel.ZIndex="1"/>
-        <Label Content="{Binding Path=RubNiz}" Background="White" Height="30" Width="50" Margin="409,357,407,201" Panel.ZIndex="1" />
-        <Label Content="{Binding Path=RubVerh}" Background="White" Height="30" Width="50" Margin="479,265,337,293" Panel.ZIndex="1" />
-        <Label Content="{Binding Path=PodPara}" Background="White" Height="30" Width="50" Margin="321,265,495,293" Panel.ZIndex="1" />
-        <Label Content="{Binding Path=PApparat}" Background="White" Height="30" Width="50" Margin="461,414,355,144" Panel.ZIndex="1" />
-        <Label Content="{Binding Path=Uroven}" Background="White" Height="30" Width="50" Margin="321,357,495,201" Panel.ZIndex="1" />
-        <Image Source="Сборка1.JPG"/>
+        <Label Content="{Binding Path=Apparat,Converter={StaticResource converter}}"  Style="{StaticResource LabelStyle}" Margin="155,89,581,464"  Panel.ZIndex="1"/>
+        <Label Content="{Binding Path=RubNiz,Converter={StaticResource converter}}"   Style="{StaticResource LabelStyle}" Margin="663,487,73,66" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=RubVerh,Converter={StaticResource converter}}"  Style="{StaticResource LabelStyle}" Margin="653,42,83,511" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=PodPara,Converter={StaticResource converter}}"  Style="{StaticResource LabelStyle}" Margin="155,208,581,344" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=PApparat,Converter={StaticResource converter}}" Style="{StaticResource LabelStyle}" Margin="155,30,581,523" Panel.ZIndex="1" />
+        <Label Content="{Binding Path=Uroven,Converter={StaticResource converter}}"   Style="{StaticResource LabelStyle}" Margin="411,472,325,80" Panel.ZIndex="1" />
+        <Image Source="avtoklav2.png"/>
     </Grid>
 </UserControl>
